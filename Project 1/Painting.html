@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Painting</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400" style="cursor: cell;">
+    Please use a browser that supports "canvas"
+    </canvas>
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="Painting.js"></script>
+
+    <div style="position:absolute;left:450px;top:10px">
+      <p>Extra attributes:</p>
+      <p>1. The cursor will change its form depending on the area underneath.</p>
+      <p>2. Three options to select between different numbers of shapes while dragging.</p>
+      <p>3. Other than RGB option, the fourth attribute transparent is also available to adjust.</p>
+    </div>
+
+    <div style="position:relative;top:10px">
+      <button id="clearButton" style="cursor: pointer;">clear canvas</button>
+    </div>
+
+    <div style="position:relative;top:20px">
+      Drawing Mode:
+    </div>
+
+    <div style="position:relative;top:25px">
+      <button id="squares" style="cursor: pointer;">Squares</button>
+      <button id="triangles" style="cursor: pointer;">Triangles</button>
+      <button id="circles" style="cursor: pointer;">Circles</button>
+    </div>
+
+    <div style="position:relative;top:35px">
+      Shape Color:
+    </div>
+
+    <div style="position:relative;top:35px">
+      Red <input type="range" min="1" max="100" value="50" class="slider" id="redRange" style="cursor: ew-resize;">
+      Green <input type="range" min="1" max="100" value="50" class="slider" id="greenRange" style="cursor: ew-resize;">
+      Blue <input type="range" min="1" max="100" value="50" class="slider" id="blueRange" style="cursor: ew-resize;">
+      Transparent <input type="range" min="1" max="100" value="100" class="slider" id="transparentRange" style="cursor: ew-resize;">
+    </div>
+
+    <div style="position:relative;top:45px">
+      Shape Size: <input type="range" min="1" max="100" value="50" class="slider" id="shapeRange" style="cursor: ew-resize;">
+      (Circle) Segment Count: <input type="range" min="1" max="100" value="50" class="slider" id="segmentRange" style="cursor: ew-resize;">
+    </div>
+
+    <div style="position:relative;top:55px">
+      Drawing frequency while dragging;
+    </div>
+
+    <div style="position:relative;top:55px">
+      <button id="close" style="cursor: pointer;">close</button>
+      <button id="mediam" style="cursor: pointer;">mediam</button>
+      <button id="farAway" style="cursor: pointer;">faraway</button>
+    </div>
+  </body>
+
+</html>
